@@ -1,0 +1,9 @@
+20240618-232943: Error: module 'pygame' has no attribute 'camera'
+20240618-233029: Error: DisplayManager.__init__() takes 1 positional argument but 3 were given
+20240618-233226: Error: DisplayManager.__init__() takes 1 positional argument but 3 were given
+20240618-233230: Error capturing image: 'cv2.VideoCapture' object has no attribute 'get_image'
+20240618-233230: Error: record_video() missing 1 required positional argument: 'camera'
+20240618-233234: Error capturing image: 'cv2.VideoCapture' object has no attribute 'get_image'
+20240618-233234: Error: record_video() missing 1 required positional argument: 'camera'
+20240618-233759: Error recording video: 'Camera' object has no attribute 'start_recording'
+20240618-233759: Error recording video: 'Camera' object has no attribute 'start_recording'
