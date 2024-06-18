@@ -7,3 +7,52 @@
 20240618-233234: Error: record_video() missing 1 required positional argument: 'camera'
 20240618-233759: Error recording video: 'Camera' object has no attribute 'start_recording'
 20240618-233759: Error recording video: 'Camera' object has no attribute 'start_recording'
+20240618-234035: Error capturing image: Camera must be started
+20240618-234037: Error capturing image: Camera must be started
+20240618-234037: Error capturing image: Camera must be started
+20240618-234038: Error capturing image: Camera must be started
+20240618-234038: Error capturing image: Camera must be started
+20240618-234038: Error capturing image: Camera must be started
+20240618-234039: Error capturing image: Camera must be started
+20240618-234039: Error capturing image: Camera must be started
+20240618-234144: Error capturing image: Camera must be started
+20240618-234144: Error capturing image: Camera must be started
+20240618-234146: Error recording video: float division by zero
+20240618-234156: Error capturing image: Camera must be started
+20240618-234156: Error capturing image: Camera must be started
+20240618-234157: Error capturing image: Camera must be started
+20240618-234158: Error capturing image: Camera must be started
+20240618-234159: Error capturing image: Camera must be started
+20240618-234159: Error capturing image: Camera must be started
+20240618-234207: Error capturing image: Camera must be started
+20240618-234208: Error capturing image: Camera must be started
+20240618-234208: Error capturing image: Camera must be started
+20240618-234208: Error capturing image: Camera must be started
+20240618-234208: Error capturing image: Camera must be started
+20240618-234211: Error capturing image: Camera must be started
+20240618-234211: Error capturing image: Camera must be started
+20240618-234212: Error capturing image: Camera must be started
+20240618-234212: Error capturing image: Camera must be started
+20240618-234216: Error recording video: float division by zero
+20240618-234218: Error recording video: float division by zero
+20240618-234219: Error recording video: float division by zero
+20240618-234219: Error recording video: Unknown C++ exception from OpenCV code
+20240618-234225: Error capturing image: Camera must be started
+20240618-234225: Error capturing image: Camera must be started
+20240618-234228: Error capturing image: Camera must be started
+20240618-234235: Error capturing image: Camera must be started
+20240618-234237: Error capturing image: Camera must be started
+20240618-234238: Error capturing image: Camera must be started
+20240618-234238: Error capturing image: Camera must be started
+20240618-234238: Error capturing image: Camera must be started
+20240618-234238: Error capturing image: Camera must be started
+20240618-234238: Error capturing image: Camera must be started
+20240618-234238: Error capturing image: Camera must be started
+20240618-234241: Error recording video: float division by zero
+20240618-234241: Error recording video: Unknown C++ exception from OpenCV code
+20240618-234333: Error recording video: 'Camera' object has no attribute 'start_recording'
+20240618-234333: Error recording video: 'Camera' object has no attribute 'start_recording'
+20240618-235132: Error recording video: OpenCV(4.10.0) D:\a\opencv-python\opencv-python\opencv\modules\imgproc\src\color.cpp:196: error: (-215:Assertion failed) !_src.empty() in function 'cv::cvtColor'
+
+20240618-235505: Error recording video: OpenCV(4.10.0) D:\a\opencv-python\opencv-python\opencv\modules\imgproc\src\color.cpp:196: error: (-215:Assertion failed) !_src.empty() in function 'cv::cvtColor'
+

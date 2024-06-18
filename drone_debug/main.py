@@ -1,16 +1,16 @@
-# main.py
-
 import sys
 import pygame
 import time
+import threading
 from manager.joystick_manager import JoystickManager
 from manager.display_manager import DisplayManager
-from manager.media_manager import capture_image, record_video
+from manager.media_manager import capture_image, record_video, stop_video_recording
 
 SCREEN_WIDTH, SCREEN_HEIGHT = 800, 600
 
 BUTTON_CAPTURE_IMAGE = 2  
 BUTTON_RECORD_VIDEO = 3  
+BUTTON_STOP_VIDEO = 5
 
 BUTTON_NAMES = {
     0: "middle button (1)",
@@ -34,6 +34,9 @@ AXIS_NAMES = {
     3: "Zoom in/out"
 }
 
+def record_video_task(camera):
+    record_video(camera)
+
 def main():
     try:
         pygame.init()
@@ -42,9 +45,10 @@ def main():
         joystick_manager = JoystickManager()
         display_manager = DisplayManager()
 
-        # Initialize Camera
-        camera = pygame.camera.Camera(pygame.camera.list_cameras()[0])  # Assuming only one camera connected
+        camera = pygame.camera.Camera(pygame.camera.list_cameras()[0]) 
         camera.start()
+
+        record_thread = None
 
         while True:
             display_manager.clear_screen()
@@ -67,21 +71,24 @@ def main():
             display_manager.draw_axes(axes_values)
             display_manager.update_display()
 
-            # Handle media capture based on joystick button presses
             if buttons_state[BUTTON_CAPTURE_IMAGE]:
                 img_filename = capture_image(camera)
                 if img_filename:
                     print(f"Captured image: {img_filename}")
 
-            if buttons_state[BUTTON_RECORD_VIDEO]:
-                video_filename = record_video(camera)
-                if video_filename:
-                    print(f"Recording video: {video_filename}")
+            if buttons_state[BUTTON_RECORD_VIDEO] and record_thread is None:
+                record_thread = threading.Thread(target=record_video_task, args=(camera,))
+                record_thread.start()
+
+            if buttons_state[BUTTON_STOP_VIDEO] and record_thread is not None:
+                stop_video_recording()
+                record_thread.join() 
+                record_thread = None
+                print("Video recording stopped")
 
     except KeyboardInterrupt:
         print("Exiting...")
     finally:
-        # Clean up
         camera.stop()
         pygame.quit()
 

@@ -1,7 +1,6 @@
 import os
 import time
 
-# Directory path for log
 LOG_DIR = "drone_capture/log"
 
 def log_error(error_message):
